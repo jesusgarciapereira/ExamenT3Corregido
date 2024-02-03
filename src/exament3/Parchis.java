@@ -23,12 +23,11 @@ public class Parchis {
 	/**
 	 * Posiciones de la ficha del Jugador 1, inicialmente en la casilla 0
 	 */
-	int fichaJ1 = 0; 
-	
+	int fichaJ1;
 	/**
 	 * Posiciones de la ficha del Jugador 2, inicialmente en la casilla 0
 	 */
-	int fichaJ2 = 0;
+	int fichaJ2;
 
 	/**
 	 * Nombre del Jugador 1, inicialmente vacio
@@ -152,13 +151,17 @@ public class Parchis {
 	 */
 	public String esGanador() {
 
+		String nomGanador;
+
 		if (fichaJ1 == TAM_TABLERO) {
-			return nomJ1;
+			nomGanador = nomJ1;
 		} else if (fichaJ2 == TAM_TABLERO) {
-			return nomJ2;
+			nomGanador = nomJ2;
 		} else {
-			return "";
+			nomGanador = "";
 		}
+
+		return nomGanador;
 
 	}
 

@@ -12,19 +12,32 @@ public class Parchis {
 	public static final int TAM_TABLERO = 10;
 
 	/**
-	 * Valores de los dos dados en cada tirada
+	 * Valores del primer dado en cada tirada
 	 */
-	static int dado1, dado2;
+	static int dado1;
+	/**
+	 * Valores del segundo dado en cada tirada
+	 */
+	static int dado2;
 
 	/**
-	 * Posiciones de las fichas de ambos jugadores, inicialmente en la casilla 0
+	 * Posiciones de la ficha del Jugador 1, inicialmente en la casilla 0
 	 */
-	int fichaJ1 = 0, fichaJ2 = 0;
+	int fichaJ1 = 0; 
+	
+	/**
+	 * Posiciones de la ficha del Jugador 2, inicialmente en la casilla 0
+	 */
+	int fichaJ2 = 0;
 
 	/**
-	 * Nombres de ambos jugadores, inicialmente vacios
+	 * Nombre del Jugador 1, inicialmente vacio
 	 */
-	String nomJ1 = "", nomJ2 = "";
+	String nomJ1 = "";
+	/**
+	 * Nombre del Jugador 2, inicialmente vacio
+	 */
+	String nomJ2 = "";
 
 	/**
 	 * Construcctor sin parámetros
@@ -95,7 +108,7 @@ public class Parchis {
 
 	/**
 	 * Funcion que representa el avance de las fichas segun los valores asignados a
-	 * los dados y la posicion en la que se encentre 
+	 * los dados y la posicion en la que se encentre
 	 * 
 	 * @param jugador Jugador que tenga el turno
 	 */
@@ -118,7 +131,8 @@ public class Parchis {
 	}
 
 	/**
-	 * Funcion que muestra el mensaje del estado de la carrera: quien va ganando o si van empatados
+	 * Funcion que muestra el mensaje del estado de la carrera: quien va ganando o
+	 * si van empatados
 	 */
 	public void estadoCarrera() {
 		if (fichaJ1 > fichaJ2) {
@@ -133,6 +147,7 @@ public class Parchis {
 
 	/**
 	 * Funcion que indica quien ha ganado la partida
+	 * 
 	 * @return Nombre del Jugador 1, nombre del Jugador 2 o campo vacio
 	 */
 	public String esGanador() {

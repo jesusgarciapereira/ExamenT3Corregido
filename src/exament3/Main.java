@@ -2,16 +2,24 @@ package exament3;
 
 import java.util.Scanner;
 
+/**
+ * Clase ejecutable de nuestro parchis
+ */
 public class Main {
 
+	/**
+	 * Metodo main()
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Parchis parchis;
-		String nomJ1, nomJ2;
+		String nomJ1;
+		String nomJ2;
 		String ganador = "";
 		int turno = 1;
 
-		System.out.println("BIENVENIDO AL PARCHÕçS DEL IES NERVI”N =D");
+		System.out.println("BIENVENIDO AL PARCHÕçS DEL IES NERVIÔøΩN =D");
 
 		System.out.println("Introduzca el nombre del jugador 1");
 		nomJ1 = sc.nextLine();
@@ -24,7 +32,7 @@ public class Main {
 		parchis = new Parchis(nomJ1, nomJ2);
 
 		ganador = parchis.esGanador();
-		while (ganador.equals("") == true) {
+		while (ganador.equals("")) {
 			System.out.println("Pulse una tecla para avanzar");
 			sc.nextLine();
 
@@ -36,10 +44,16 @@ public class Main {
 			ganador = parchis.esGanador();
 		}
 
-		System.out.println("°ENHORABUENA " + parchis.nomJ1 + ", HAS GANADO!");
+		System.out.println("ÔøΩENHORABUENA " + parchis.nomJ1 + ", HAS GANADO!");
 
+		sc.close();
 	}
 
+	/**
+	 * Funcion que llama a las funciones que se aplican en el turno de cada jugador
+	 * @param parchis Objeto de tipo Parchis
+	 * @param jugador Jugador que tenga el turno
+	 */
 	public static void turno(Parchis parchis, int jugador) {
 
 		System.out.println("Turno de " + (jugador==1 ? parchis.nomJ1 : parchis.nomJ2));

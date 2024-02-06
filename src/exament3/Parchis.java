@@ -14,29 +14,29 @@ public class Parchis {
 	/**
 	 * Valores del primer dado en cada tirada
 	 */
-	static int dado1;
+	public static int dado1;
 	/**
 	 * Valores del segundo dado en cada tirada
 	 */
-	static int dado2;
+	public static int dado2;
 
 	/**
 	 * Posiciones de la ficha del Jugador 1, inicialmente en la casilla 0
 	 */
-	int fichaJ1;
+	public int fichaJ1;
 	/**
 	 * Posiciones de la ficha del Jugador 2, inicialmente en la casilla 0
 	 */
-	int fichaJ2;
+	public int fichaJ2;
 
 	/**
 	 * Nombre del Jugador 1, inicialmente vacio
 	 */
-	String nomJ1 = "";
+	public String nomJ1 = "";
 	/**
 	 * Nombre del Jugador 2, inicialmente vacio
 	 */
-	String nomJ2 = "";
+	public String nomJ2 = "";
 
 	/**
 	 * Construcctor sin parámetros
@@ -114,13 +114,13 @@ public class Parchis {
 	public void avanzaPosiciones(int jugador) {
 		int tirada = dado1 + dado2;
 
-		if (jugador == 1) {
+		if (jugador == 1) { 
 			fichaJ1 += tirada;
 
 			if (fichaJ1 > TAM_TABLERO) {
 				fichaJ1 = TAM_TABLERO - (fichaJ1 - TAM_TABLERO);
 			}
-		} else if (jugador == 2) {
+		} else if (jugador == 2) { 
 			fichaJ2 += tirada;
 
 			if (fichaJ2 > TAM_TABLERO) {

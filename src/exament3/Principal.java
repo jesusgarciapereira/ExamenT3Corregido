@@ -5,14 +5,14 @@ import java.util.Scanner;
 /**
  * Clase ejecutable de nuestro parchis
  */
-public class Main {
+public class Principal {
 
 	/**
 	 * Metodo main()
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); // NOPMD by Jesús on 6/2/24 19:07
 		Parchis parchis;
 		String nomJ1;
 		String nomJ2;

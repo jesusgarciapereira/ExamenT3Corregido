@@ -16,7 +16,7 @@ public class Principal {
 		Parchis parchis;
 		String nomJ1;
 		String nomJ2;
-		String ganador = "";
+		String ganador = ""; // NOPMD by Jesús on 6/2/24 19:34
 		int turno = 1;
 
 		System.out.println("BIENVENIDO AL PARCH͍S DEL IES NERVI�N =D");

@@ -114,13 +114,13 @@ public class Parchis {
 	public void avanzaPosiciones(int jugador) {
 		int tirada = dado1 + dado2;
 
-		if (jugador == 1) { 
+		if (jugador == 1) {  // NOPMD by Jesús on 6/2/24 19:26
 			fichaJ1 += tirada;
 
 			if (fichaJ1 > TAM_TABLERO) {
 				fichaJ1 = TAM_TABLERO - (fichaJ1 - TAM_TABLERO);
 			}
-		} else if (jugador == 2) { 
+		} else if (jugador == 2) {  // NOPMD by Jesús on 6/2/24 19:26
 			fichaJ2 += tirada;
 
 			if (fichaJ2 > TAM_TABLERO) {
